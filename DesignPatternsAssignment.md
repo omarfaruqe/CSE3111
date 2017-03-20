@@ -2,7 +2,12 @@ Design Patterns Assignment
 ===================
 Create a branch on git and name it as your roll and work on it. Once you are done, push the code to github. 
 Do not merge with master branch. I have added one such example under the name Shakil Ahmed, 
-you will follow this style of writing but you need to add programming code as well.
+you will follow this style of writing but you need to add programming code as well and paraphrase each and every sentence. Make sure your content is not plagiarized. i.e. The example I've given here about Null Object Design pattern is plagiarized from the link given there.
+
+**plagiarism:** an act or instance of using or closely imitating the language and thoughts of another author without authorization and the representation of that author's work as one's own, as by not crediting the original author:
+
+1. Read more about [plagiarism](http://www.plagiarism.org/plagiarism-101/what-is-plagiarism/)
+1. [Online Plagiarism Checker](http://smallseotools.com/plagiarism-checker/)
 
 ----------
 
