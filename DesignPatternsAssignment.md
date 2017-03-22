@@ -1,4 +1,5 @@
-Design Patterns Assignment
+# Design Patterns Assignment
+## Due date (April 05, 2017 Midnight)
 ===================
 Create a branch on git and name it as your roll and work on it. Once you are done, push the code to github. 
 Do not merge with master branch. I have added one such example under the name Shakil Ahmed, 
