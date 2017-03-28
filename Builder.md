@@ -1,7 +1,7 @@
 
- # Builder
+ #                                                   Builder
  
- ## Intent
+ ##  Intent
  
 #### 1.Seperate the formation of a complex object from its representation so that the same construction process can create different representations.
 #### 2.Parse a complex representation and create one of several targets.
