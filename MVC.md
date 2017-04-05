@@ -14,7 +14,7 @@ By the use of MVC pattern we can implement these things :
 
 # Implementation:
 Now I create a Student class which  acting as a Model. The StudentView  class which can print student details on console acting as a view and StudentController is the controller class responsible to store data in Student object and update view StudentView accordingly. MVCPatternDemo is  our demo class, will use StudentController to demo.
- 
+![](https://www.tutorialspoint.com/design_pattern/images/mvc_pattern_uml_diagram.jpg)
 # Sample Code:
 ### Class 1: Create Model
 Student.java
