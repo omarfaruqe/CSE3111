@@ -31,7 +31,7 @@ that is provided by the proxy.
 
 ##Sample code:
 
-'''java
+```java
 class OriginalClass {
 
     private double val = 0.0;
@@ -90,6 +90,6 @@ class BecomeActiveObject {
         );
     }
 }
-'''
+```
 
 
