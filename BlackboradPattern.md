@@ -65,7 +65,7 @@ Examples Of Blackboard Design Patten:
 
 Speech to Text conversion or speech recognition is very common example of Backboard design pattern. Actually blackboard design pattered was first implemented on this. There are different parts like frequencies, amplitudes in a sound wave. Saperate systems process this various parts of sound wave and recognizes the words.
 
-![sound-wave](https://www.dropbox.com/s/ninakrjm10txu99/speech-recognition.JPG?dl=0)
+![sound-wave](https://cloud.githubusercontent.com/assets/17364343/24720460/0a234a08-1a5f-11e7-93f7-afefdcda92ea.JPG)
 
  Then it updates the blackboard according to the recognized words. Then a separate system read the generated words from the blackboard and do the sytexical changes like applying sentence sturceture and grammer using the words. Another separate system may use this sentences and reform them to generate various probable meanings. Another more intelligent system can use all the meanings and choose the most appropriate meaning from them. Meanwhile more sound waves are comming and generating the words. So each separates process are working together and all of them have access to the blackboard.
 
