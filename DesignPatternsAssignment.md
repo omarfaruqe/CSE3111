@@ -40,6 +40,56 @@ Student's name along with assigned design patterns
 
 ## Intercepting Filter Pattern
 
+### Intent
+
+ - Provide pluggable filters to conduct necessary pre-processing and post-processing to request from client to a target.
+ - Authentication/ authorization/ logging or tracking of request to corresponding handlers.
+
+### Use the Intercepting Filter pattern when 
+
+ - A system use pre-processing or post-processing requests.
+ - A system should do the authentication/ authorization/ logging or tracking of request and then pass the request to the corresponding handlers.
+ - You want a modular approach to configuring pre-processinng and post-processing schemes.
+ 
+### Problem
+
+Preprocessing and post-processing of a client Web request and response are required.When a request enters a Web application, it often must pass several entrance tests prior to the main processing stage.  For example:-
+
+ - Has the client been authenticated? 
+ - Does the client have a valid session?
+ - Is the client's IP address from a trusted network?
+ - Does the request path violate any constraints?
+ - What encoding does the client use to send the data?
+ - Do we support the browser type of the client?
+
+### Solution
+Creating pluggable filters to process common services in a standard manner without requiring changes to core request processing code. The filters intercept incoming request and outgoing responses, allowing preprocessing and postprocessing. We are able to add and remove these filters unobtrusively, without requiring changes to our existing code.
+
+We are able, in effect, to decorate our main processing with a variety of common services, such as security, logging, debugging, and so forth. These filters are components that are independent of the main application code, and they may be added or removed declaratively. For example, a deployment configuration file may be modified to set up a chain of filters. The same configuration file might include a mapping of specific URLs to this filter chain. When a client requests a resource that matches this configured URL mapping, the filters in the chain are each processed in order before the requested target resource is invoked.
+
+### Structure
+ 
+Filter manager, filter chain, filters and target are components of the pattern.
+![Figure of intercepting filter pattern](http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/148055.gif)
+
+##### Filter Manager:-
+	
+ The FilterManager manages filter processing. It creates the FilterChain with the appropriate filters, in the correct order, and initiates processing.
+
+##### FilterChain:-
+
+The FilterChain is an ordered collection of independent filters.
+
+##### FilterOne, FilterTwo, FilterThree:-
+
+These are the individual filters that are mapped to a target. The FilterChain coordinates their processing.
+
+##### Target:-
+
+The Target is the resource requested by the client.
+ 
+
+-------------------------
  28. Mst. Halima Afroz	(Interpreter)
  29. Muhammad Sad-Al-Munir (Iterator)
  30. Mustofa Mahmud	(Join)
