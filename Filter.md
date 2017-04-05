@@ -26,7 +26,7 @@ Example & Implementation
 A filter pattern uses some criteria for a filterred result. As example, a list of employee of a firm can be generated, where the criteria can be a list based on gender, marital status, and/or both.
 A criteria interface contains the method to generate the lists. Lists are created via criteria classes.
 
-![Structure of Criteria Pattern of filtering people based on gender and/or marrital status](https://www.tutorialspoint.com/design_pattern/images/filter_pattern_uml_diagram.jpg Structure of Filter Pattern)
+![Structure of Criteria Pattern of filtering people based on gender and/or marrital status](filter.jpg Structure of Filter Pattern)
 
 ###Check List-
 1. Identify the criteria.

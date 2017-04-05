@@ -11,12 +11,12 @@ There is a family of algorithms encaplulated and the client needs to make them i
 Discuss
 -
 The Strategy pattern defines a set of algorithms that are interchangeable.Let us think about the transportation system. We can use the bus, the truck or the plane. They can be chosen by the user or they are interchangeable. These systems are used in defferent situations. They are interchanged in the case of distance, time or cost, etc.
-![car picture](https://sourcemaking.com/files/v2/content/patterns/Strategy_example1.svg Example via Car)
+![car picture](car_example.svg Example via Car)
 
 Structure
 -
 The interface entity could represent an abstract base class or the method signature expectations by the client .IN former case it represents dynamic polimorphism. Latter cases it represents static polimorphism.
-![structure picture](https://sourcemaking.com/files/v2/content/patterns/Strategy_.svg Structure Picture)
+![structure picture](Strategy.svg Structure Picture)
 
 * Client
 * needs a colaborator.
