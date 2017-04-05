@@ -136,7 +136,7 @@ Create new instance using prototypical instance of other object. Here create new
 - It is use at that time when one,s see there are numerous potential classes that you only want use them when they needed at run time.  
 - Here obiously reduce the need for  creating subclasses.  
 ### Structure  
-![imz](/img/Prototype.PNG)  
+![imz](http://www.oodesign.com/images/stories/prototype%20implementation%20-%20uml%20class%20diagram.gif)  
   
 ### Discussion  
   
