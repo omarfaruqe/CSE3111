@@ -10,7 +10,7 @@ While working with tree-structured data, programmers sometimes have to different
 When it is the case that the clients to ignore discrimination between compositions of objects and single objects, Composite pattern can be used. More specifically if programmers realize that they are treating multiple objects in the same manner and almost every time they are using nearly the same code to handle each of these objects, then it is a good choice to implement composite pattern; in this situation it is less complex to treat primitives and composites as homogeneous.
 
 ###Structure:
-![](C:\Users\Aashique\Desktop\composite pattern/Structure.png)
+![structure](https://cloud.githubusercontent.com/assets/26010300/24720832/35156d94-1a60-11e7-8713-fe2eb8da7449.png)
 
 * Component: It is the abstraction for all objects, including composite ones. Here, the declaration of the interface for objects in the composition, takes place.
 * Leaf: It represents leaf objects i.e. objects that do not have children in the composition. All component methods are implemented here.
