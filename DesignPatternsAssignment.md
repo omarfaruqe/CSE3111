@@ -71,24 +71,28 @@ We are able, in effect, to decorate our main processing with a variety of common
 
 ### Structure
  
-Filter manager, filter chain, filters and target are components of the pattern.
+*Client*, *Filter manager*, *Filter chain*, *Filters* and *Target* are components of the pattern.
 ![Figure of intercepting filter pattern](http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/148055.gif)
 
-##### Filter Manager:-
+##### *Client*:-
+
+The *Client* sends a request to the *FilterManager*.
+
+##### *Filter Manager*:-
 	
- The FilterManager manages filter processing. It creates the FilterChain with the appropriate filters, in the correct order, and initiates processing.
+ The *FilterManager* manages filter processing. It creates the *FilterChain* with the appropriate filters, in the correct order, and initiates processing.
 
-##### FilterChain:-
+##### *FilterChain*:-
 
-The FilterChain is an ordered collection of independent filters.
+The *FilterChain* is an ordered collection of independent filters.
 
-##### FilterOne, FilterTwo, FilterThree:-
+##### *FilterOne, FilterTwo, FilterThree*:-
 
-These are the individual filters that are mapped to a target. The FilterChain coordinates their processing.
+These are the individual filters that are mapped to a target. The *FilterChain* coordinates their processing.
 
-##### Target:-
+##### *Target*:-
 
-The Target is the resource requested by the client.
+The *Target* is the resource requested by the *client*.
 
 ### Implementation
 
