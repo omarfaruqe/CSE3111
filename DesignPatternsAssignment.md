@@ -73,6 +73,109 @@ But What can we do? If you are programming in a language that support *dynamic m
 
 ### The Implementation
 
+  We need a template for visitor operation. All the method will be a subclass of this.
+
+    class Operation
+    {
+    public:
+        virtual void youGotABoat(Boat *b) = 0;
+        virtual void youGotACar(Car *c) = 0;
+        virtual void youGotACopter(Copter *c) = 0;
+    };
+
+
+The similar classes are decedent from a super-class which defines all the similar properties and methods.
+
+    class Vehicle
+    {
+        /* codes for all the complex operation we assumed
+        //~~~
+        //~~~
+        */
+
+    public:
+        //now, lets make the vehicle visitor friendly
+        virtual void perform(Operation *v) = 0;
+    };
+
+Concrete implementation of sub-classes.
+
+    //define Boat
+    class Boat: public Vehicle
+    {
+        /* codes for all the complex operation we assumed
+        //~~~
+        //~~~
+        */
+
+    public:
+        //now, lets perform the task
+        void perform(Operation *v){
+            v->youGotABoat(this);
+        }
+    };
+
+    //define Car
+    class Car: public Vehicle
+    {
+        /* codes for all the complex operation we assumed
+        //~~~
+        //~~~
+        */
+
+    public:
+        //now, lets perform the task
+        void perform(Operation *v){
+            v->youGotACar(this);
+        }
+    };
+
+    //define copter
+    class Copter: public Vehicle
+    {
+        /* codes for all the complex operation we assumed
+        //~~~
+        //~~~
+        */
+
+    public:
+        //now, lets perform the task
+        void perform(Operation *v){
+            v->youGotACopter(this);
+        }
+    };
+
+The hierarchy is ready to accept any method that is similar to all the vehicles.
+
+    //Lets add the method Run which will define the running method
+    class Run: public Operation
+    {
+    public:
+        void youGotABoat(Boat *b){
+            cout << "A boat is running on water." << endl;
+        }
+        void youGotACar(Car *c){
+            cout << "A car is running on road." << endl;
+        }
+        void youGotACopter(Copter *b){
+            cout << "You do not have enough money to run a copter" << endl;
+        }
+    };
+
+We can add others similarly. I strongly recommend readers to implement a method repaint, without modifying any existing classes which will repaint a Vehicle.
+
+    int main()
+    {
+        Boat boat;
+        Copter copter;
+        Run run;
+
+        boat.perform(&run);
+        copter.perform(&run);
+
+        return 0;
+    }
+
 ### Application: Double Dispatch
 
 ### Conclusion
