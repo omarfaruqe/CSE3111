@@ -61,6 +61,8 @@ Preprocessing and post-processing of a client Web request and response are requi
  - Does the request path violate any constraints?
  - What encoding does the client use to send the data?
  - Do we support the browser type of the client?
+ 
+The key to solving this problem in a flexible and unobtrusive manner is to have a simple mechanism for adding and removing processing components, in which each component completes a specific filtering action.
 
 ### Solution
 Creating pluggable filters to process common services in a standard manner without requiring changes to core request processing code. The filters intercept incoming request and outgoing responses, allowing preprocessing and postprocessing. We are able to add and remove these filters unobtrusively, without requiring changes to our existing code.
@@ -92,7 +94,7 @@ The Target is the resource requested by the client.
 
 We are going to create a *FilterChain*, *FilterManager*, *Target*, *Client* as various objects representing our entities. *AuthenticationFilter* and *DebugFilter* represent concrete filters.
 
-*InterceptingFilterDemo*, our demo class, will use *Client* to demonstrate Intercepting Filter Design Pattern.
+*InterceptingFilterDemo*, our demo class, will use *Client* to demonstrate Intercepting Filter Design Pattern.[Reference](file:///C:/Users/Lenovo/Downloads/Design%20Pattern%20Intercepting%20Filter%20Pattern.html)
 
 ![Implementation image](https://www.tutorialspoint.com/design_pattern/images/interceptingfilter_pattern_uml_diagram.jpg)
 
@@ -247,7 +249,7 @@ The intent of a Null Object is to encapsulate the absence of an object by provid
 ### Problem
 Given that an object reference may be optionally null, and that the result of a null check is to do nothing or use some default value, how can the absence of an object — the presence of a null reference — be treated transparently?
 
-###Discussion
+### Discussion
 Sometimes a class that requires a collaborator does not need the collaborator to do anything. However, the class wishes to treat a collaborator that does nothing the same way it treats one that actually provides behavior.
 
 Consider for example a simple screen saver which displays balls that move about the screen and have special color effects. This is easily achieved by creating a Ball class to represent the balls and using a Strategy pattern to control the ball's motion and another Strategy pattern to control the ball's color.
