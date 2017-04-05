@@ -66,24 +66,24 @@ class PropertiesDemo <br>
   { <br>
 
     try (FileReader fileReader = new FileReader("db.properties");) <br>
-    { <br>
+    { 
 
-      Properties p = new Properties(); <br>
-      /* <br>
-       * Reads a property list (key and element pairs) <br>
-       * from the input character stream in a simple <br>
-       * line-oriented format. <br>
-       */ <br>
-      p.load(fileReader); <br>
+      Properties p = new Properties(); 
+      /* 
+       * Reads a property list (key and element pairs) 
+       * from the input character stream in a simple 
+       * line-oriented format. 
+       */ 
+      p.load(fileReader); 
 
-      /* <br>
-       * Prints this property list out to the <br>
-       * specified output stream.This method is useful <br>
-       * for debugging. <br>
-       */ <br>
-      p.list(System.out); <br>
+      /* 
+       * Prints this property list out to the 
+       * specified output stream.This method is useful 
+       * for debugging. 
+       */
+      p.list(System.out); 
 
-    } <br>
+    } 
 
-  } <br>
-} <br>
+  } 
+} 
