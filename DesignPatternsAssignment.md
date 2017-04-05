@@ -87,7 +87,134 @@ These are the individual filters that are mapped to a target. The FilterChain co
 ##### Target:-
 
 The Target is the resource requested by the client.
+
+### Implementation
+
+We are going to create a *FilterChain*, *FilterManager*, *Target*, *Client* as various objects representing our entities. *AuthenticationFilter* and *DebugFilter* represent concrete filters.
+
+*InterceptingFilterDemo*, our demo class, will use *Client* to demonstrate Intercepting Filter Design Pattern.
+
+![Implementation image](https://www.tutorialspoint.com/design_pattern/images/interceptingfilter_pattern_uml_diagram.jpg)
+
+##### Create Filter interface:-
+
+*Filter.java*
+
+	public interface Filter {
+	   public void execute(String request);
+	}
  
+##### Create concrete filters:-
+
+*AuthenticationFilter.java*
+
+	public class AuthenticationFilter implements Filter {
+	   public void execute(String request){
+		  System.out.println("Authenticating request: " + request);
+	   }
+	}
+
+*DebugFilter.java*
+
+	public class DebugFilter implements Filter {
+	   public void execute(String request){
+		  System.out.println("request log: " + request);
+	   }
+	}
+
+##### Create Target:-
+
+*Target.java*
+
+	public class Target {
+	   public void execute(String request){
+		  System.out.println("Executing request: " + request);
+	   }
+	}
+
+##### Create Filter Chain:-
+
+*FilterChain.java*
+
+	import java.util.ArrayList;
+	import java.util.List;
+
+	public class FilterChain {
+	   private List<Filter> filters = new ArrayList<Filter>();
+	   private Target target;
+
+	   public void addFilter(Filter filter){
+		  filters.add(filter);
+	   }
+
+	   public void execute(String request){
+		  for (Filter filter : filters) {
+			 filter.execute(request);
+		  }
+		  target.execute(request);
+	   }
+
+	   public void setTarget(Target target){
+		  this.target = target;
+	   }
+	}
+
+##### Create Filter Manager:-
+
+*FilterManager.java*
+
+	public class FilterManager {
+	   FilterChain filterChain;
+
+	   public FilterManager(Target target){
+		  filterChain = new FilterChain();
+		  filterChain.setTarget(target);
+	   }
+	   public void setFilter(Filter filter){
+		  filterChain.addFilter(filter);
+	   }
+
+	   public void filterRequest(String request){
+		  filterChain.execute(request);
+	   }
+	}
+
+##### Create Client:-
+
+*Client.java*
+
+	public class Client {
+	   FilterManager filterManager;
+
+	   public void setFilterManager(FilterManager filterManager){
+		  this.filterManager = filterManager;
+	   }
+
+	   public void sendRequest(String request){
+		  filterManager.filterRequest(request);
+	   }
+	}
+
+##### Use the Client to demonstrate Intercepting Filter Design Pattern:-
+
+*InterceptingFilterDemo.java*
+
+	public class InterceptingFilterDemo {
+	   public static void main(String[] args) {
+		  FilterManager filterManager = new FilterManager(new Target());
+		  filterManager.setFilter(new AuthenticationFilter());
+		  filterManager.setFilter(new DebugFilter());
+
+		  Client client = new Client();
+		  client.setFilterManager(filterManager);
+		  client.sendRequest("HOME");
+	   }
+
+##### Verify the output:-
+
+	Authenticating request: HOME
+	request log: HOME
+	Executing request: HOME
 
 -------------------------
  28. Mst. Halima Afroz	(Interpreter)
