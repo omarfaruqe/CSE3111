@@ -25,7 +25,7 @@ But in software engineering, the singleton pattern is a software design pattern 
 ### Implementation
 In singleton, first of all, we need to need to create a single object class. It involves a static member in the "Singleton" class and a private constructor and also a static public method that returns a reference to the static member. The Singleton Pattern defines a getInstance operation which exposes the unique instance which is accessed by the users. getInstance operation is responsible for creating its class unique instance in case it is not created yet and to return that instance.
 ### Java code implementation
-![](C:\Users\Imu\Desktop\WAR\five\singleton_pattern_uml_diagram.jpg)
+![singleton_pattern_uml_diagram](https://cloud.githubusercontent.com/assets/19298597/24719875/1abcdbe2-1a5d-11e7-9153-67f27808da14.jpg)
 
 ```
 class Singleton
