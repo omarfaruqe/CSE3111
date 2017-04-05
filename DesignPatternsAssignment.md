@@ -26,7 +26,6 @@
 
 ### Intent
 The intent of **_Façade Design Pattern_** provides a unified interface to a set of interfaces in a subsystem.Façade provides an interface which easier to use.Façade wrap a comlpex subsystem with a easier interface.
- 
 
 ### Use the Façade pattern when
 * The system is complex
@@ -36,13 +35,17 @@ The intent of **_Façade Design Pattern_** provides a unified interface to a set
 
 ### Problem
 Clint community needs a simplified interface to the functionality of the complex system.
+
 ### Discussion
 
 ### Structure
 
 ### Rules of thumb
 
+### Code Example
+
 ### References
+**The reference link:**[https://sourcemaking.com/design_patterns/facade](https://sourcemaking.com/design_patterns/facade)
 
 
  22. Md. Rakib Bhuiyan	(Factory method, Transfer Object Pattern)
