@@ -52,6 +52,15 @@ Student's name along with assigned design patterns
  40. Multiton Shahedul Hasan	(MVC Pattern, Proxy)
  41. Shakil Ahamed	(Null Object, Visitor)
 
+## Visitor Design Pattern
+### Refreshing Your Mindset
+
+### The Implementation
+
+### Application: Double Dispatch
+
+### Conclusion
+
 
  42. Shorif Mahmud Abdullah	(Object Pool)
  43. Shubha Shadik	(Observer or Publish/subscribe)
