@@ -38,4 +38,4 @@ Problem:
 
 Structure:
 =
-![Guarded Suspension Structure](http://leave.1000space.com/images/3-guarded-suspension-design-pattern.jpg)
+![Guarded Suspension Structure](https://lh6.googleusercontent.com/-W0iDxkHf4sE/ToqbJIDrynI/AAAAAAAACcw/m8FSdEcYySg/GuardedSuspension-1.jpg)
