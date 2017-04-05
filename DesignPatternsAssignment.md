@@ -124,7 +124,18 @@ It is sometimes thought that Null Objects are over simple and "stupid" but in tr
  42. Shorif Mahmud Abdullah	(Object Pool)
  43. Shubha Shadik	(Observer or Publish/subscribe)
  44. Tasmima Tabassum	(Private Class Data)
- 45. Tipu Sultan	(Prototype)
+ 45. Tipu Sultan	(Prototype)  
+
+##Prototype design Pattern  
+___
+###Intent  
+Create new instance using prototypical instance of other object. Here create new object by coping new instace. Here new operator condider harmful.  
+
+###Use of Prototype Design pattern  
+- Here Allows for adding any subclasses instance at run time of a known super classes.  
+- It is use at that time when one,s see there are numerous potential classes that you only want use them when they needed at run time.  
+- Here obiously reduce the need for  creating subclasses.
+
 
 If you wish to write more, here are some other design patterns you can choose from
 
