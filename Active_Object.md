@@ -27,7 +27,7 @@ that allows clients in accessing the results of a method call.
 ->A client can access the methods of an object using the interface
 that is provided by the proxy.
 
-<img src="images/example.jpg" alt="Structure" height="50" width="50">
+![sequence-diagram](https://image.slidesharecdn.com/activeobject-presentation-120301221004-phpapp02/95/active-object-design-pattern-4-638.jpg?cb=1369843883)
 
 ##Sample code:
 
