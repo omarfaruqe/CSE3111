@@ -19,7 +19,7 @@ When it is the case that the clients to ignore discrimination between compositio
 
 ###Example:
 An example of composite pattern is given below. Here “back end developer” and “front end developer” working under “Developer”. Again Front end engineers (F.E engg) are working under “Front end developer” and Back end engineers (B.E engg) are working under “Back end developer”. So, here F.E. engg and B.E. engg are leaf-nodes and others are composite components. It is also shown in the pictorial diagram.
-![](C:\Users\Aashique\Desktop\composite pattern/Untitled.png)
+![untitled](https://cloud.githubusercontent.com/assets/26010300/24720858/5184c510-1a60-11e7-867d-5003c5dd81eb.png)
 
 
 Now the corresponding class diagram showing attributes and operations of leaf-nodes and composite components is shown below:
