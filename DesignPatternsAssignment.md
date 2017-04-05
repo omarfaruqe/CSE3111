@@ -42,8 +42,11 @@ Clint community needs a simplified interface to the functionality of the complex
 
 ### Structure
 ![Figure 1](https://sourcemaking.com/files/v2/content/patterns/Facade1.svg)
+Figure 1
+
 In this Figure we can see that the **Clint** useing the **_Façade_** object only and the **_Façade_** wraped the internal subsystem.
 ![Figure 2](https://sourcemaking.com/files/v2/content/patterns/Facade_1.svg)
+Figure 2
 This figure shows the internal structure of the subsystem which is wraped by the **_Façade_** object.
 
 ### Rules of thumb
