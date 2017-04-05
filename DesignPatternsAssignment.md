@@ -135,11 +135,36 @@ Create new instance using prototypical instance of other object. Here create new
 - Here Allows for adding any subclasses instance at run time of a known super classes.  
 - It is use at that time when one,s see there are numerous potential classes that you only want use them when they needed at run time.  
 - Here obiously reduce the need for  creating subclasses.  
+  
 ### Structure  
 ![imz](http://www.oodesign.com/images/stories/prototype%20implementation%20-%20uml%20class%20diagram.gif)  
+
+From this diagram we can found that or we can say about that structure that there. 
+
+Client : Make a New instance by cloning. 
+
+Prototype : Given plateform or interface for cloning.
+
+ConcreatePrototype : Cloning implementation.
+
+In here clone operation crate a instatiate class which where client request for new object and sent the request for that type of object.ConcreatePrototy handle this using clone() method. 
+
+###Example:
+
+There is client who is call for a animal type instance then there client tranfer to the animal subclass and from there are different type of classes inherit from the animal class and from there specific clone transfar to the client. Here is the benifit is there only create only secific instance clone for this reason time complexity is relatively getting low. 
+
+
   
 ### Discussion  
-  
+
+[Code of Prototype : http://ideone.com/9XFgjF](http://ideone.com/9XFgjF)  
+
+In here or in this design pattarn there will be work with that there will be no need some type different instance if there is already created any class there will only which is essential.  
+
+A abstruct base class that specify some specific virtual cloneable derive class.Each class which need polymorphic constructor contructor derive it from base class. Its prototypical instance refernce the clone() operator.  
+
+then the cliend invoke new operator instad of writting a code.  
+
 ### References  
 
 [Prototype: http://www.oodesign.com/prototype-pattern.html](http://www.oodesign.com/prototype-pattern.html)  
