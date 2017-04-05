@@ -134,7 +134,16 @@ Create new instance using prototypical instance of other object. Here create new
 ### Use of Prototype Design pattern  
 - Here Allows for adding any subclasses instance at run time of a known super classes.  
 - It is use at that time when one,s see there are numerous potential classes that you only want use them when they needed at run time.  
-- Here obiously reduce the need for  creating subclasses.
+- Here obiously reduce the need for  creating subclasses.  
+### Structure  
+![enter image description here](https://www.dropbox.com/s/pfe6t1wt36l7rqx/Prototype.PNG?dl=0)  
+  
+### Discussion  
+  
+### References  
+
+[Prototype: http://www.oodesign.com/prototype-pattern.html](http://www.oodesign.com/prototype-pattern.html)  
+and [https://sourcemaking.com/design_patterns/prototype](https://sourcemaking.com/design_patterns/prototype)
 
 
 If you wish to write more, here are some other design patterns you can choose from
