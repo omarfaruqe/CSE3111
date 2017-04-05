@@ -82,10 +82,10 @@ public final class Singleton {
 ### Considerations
 
 So far, we see that,
-- 			Singleton only allows single instance
-- 			Also, it uses first time initialization process
-- 			It instance has global presence
-- 			Object data replaced every time when instance is updated
+- 	Singleton only allows single instance
+- 	Also, it uses first time initialization process
+- 	It instance has global presence
+- 	Object data replaced every time when instance is updated
 
 
 So, we should use singleton design pattern when we need to build a single object based system and if its object data doesn’t require after finishing the object operation. 
