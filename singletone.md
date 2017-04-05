@@ -55,3 +55,37 @@ class Singleton
 
 ### Lazy initialization using double locking mechanism
 Lazy initialization is a workable technique when static method is called from multiple threads simultaneously. By using lazy initialization with double-checked locking, we can prevent creation of multiple instances of the class.
+
+
+### Java code implementation
+
+```
+public final class Singleton {
+    private static volatile Singleton instance = null;
+
+    private Singleton() {}
+
+    public static Singleton getInstance() {
+        if (instance == null) {
+            synchronized(Singleton.class) {
+                if (instance == null) {
+                    instance = new Singleton();
+                }
+            }
+        }
+        return instance;
+    }
+}
+```
+
+
+### Considerations
+
+So far, we see that,
+- 			Singleton only allows single instance
+- 			Also, it uses first time initialization process
+- 			It instance has global presence
+- 			Object data replaced every time when instance is updated
+
+
+So, we should use singleton design pattern when we need to build a single object based system and if its object data doesn’t require after finishing the object operation. 
