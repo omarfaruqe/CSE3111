@@ -53,7 +53,14 @@ Student's name along with assigned design patterns
  41. Shakil Ahamed	(Null Object, Visitor)
 
 ## Visitor Design Pattern
+
 ### Refreshing Your Mindset
+
+The pattern name *Visitor* is often misleading. People may think *Visitor Design Pattern* has something to do with visitation or iteration. But it is not. From Design Patterns,
+
+> Visitor lets you define a new operation without changing the classes of the elements on which it operates.
+
+So, Before you read the rest of the article, I strongly recommend you to reset your mind if your had similar assertion that *Visitor* has something to do with visitation. Understanding the pattern will be easier with it.
 
 ### The Implementation
 
