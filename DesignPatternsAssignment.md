@@ -38,11 +38,13 @@ Clint community needs a simplified interface to the functionality of the complex
 
 ### Discussion
 
+
 ### Structure
 
 ### Rules of thumb
 
 ### Code Example
+[C++ Code](https://ideone.com/qwpz2Q)
 
 ### References
 **The reference link:**[https://sourcemaking.com/design_patterns/facade](https://sourcemaking.com/design_patterns/facade)
