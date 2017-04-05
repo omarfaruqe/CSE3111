@@ -17,15 +17,16 @@
 
 ## Disadvantages of Command Pattern :
 
-  ** Disadvantages of command design pattern are following :**
+  **Disadvantages of command design pattern are following :**
  1.  If we have lot of commands, we might end up with lots of small command classes.
  2.  Though similar functionality can be grouped into couple of classes with each method performing task for a particular command.
  3.  The drawback with Command design pattern is that the code gets huge and confusing with high number of action methods and because of so many associations.
 
-##Implementation :
+## Implementation :
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Now we will create a remote control using command pattern where a remote will control on and off operation of a light. We create an interface Command which is acting as a command. We create a Light class which acts as a receiver. We have concrete command classes LightOnCommand and LightOffCommand implementing Command interface which will do actual command processing. A class RemoteControl is created which acts as an invoker object.
 
-** Command Interface :**
+**Command Interface :**
 
 ***Command.java***
 ```java
@@ -42,7 +43,7 @@ public interface Command {
 
 ```
 
-** Comcrete Command :**
+**Comcrete Command :**
 
 ***LightOnCommand.java***
 
@@ -71,7 +72,7 @@ public class LightOnCommand implements Command {
 
 ```
 
-*** LightOffCommand.java***
+***LightOffCommand.java***
 
 ```java
 package command_pattern;
@@ -98,7 +99,7 @@ public class LightOffCommand implements Command {
 
 ```
 
-** Receiver Class :**
+**Receiver Class :**
 
 ***Light.java***
 
@@ -124,7 +125,7 @@ public class Light {
 
 ```
 
-** Invoker Class : **
+**Invoker Class : **
 
 ***RemoteControl.java***
 
@@ -150,7 +151,7 @@ public class RemoteControl {
 
 ```
 
-** Client :**
+**Client :**
 
 ***Client.java***
 
@@ -182,7 +183,7 @@ public class Client {
 
 ```
 
-** Output :**
+**Output :**
 
 ```
 Light is on.
@@ -195,7 +196,7 @@ Light has switched off.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   The main advantage of the command design pattern is that it decouples the object that invokes the operation from the one that know how to perform it. And this advantage must be kept. There are implementations of this design pattern in which the invoker is aware of the concrete commands classes. This is wrong making the implementation more tightly coupled. The invoker should be aware only about the abstract command class. 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   We should go with the Command design pattern when we have multiple commands to execute, and it does not matter if those commands are related to each other or not.
 
-** Reference : **
+**Reference :**
 
 1. [http://javapapers.com/](http://javapapers.com/)
 2. [https://www.tutorialspoint.com/design_pattern/index.htm](https://www.tutorialspoint.com/design_pattern/index.htm)
