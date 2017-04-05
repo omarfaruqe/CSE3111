@@ -37,11 +37,18 @@ The intent of **_Façade Design Pattern_** provides a unified interface to a set
 Clint community needs a simplified interface to the functionality of the complex system.
 
 ### Discussion
+**_Façade_** discusses about encapsulating a large difficult or complex system into a single simplified interface object.It promotes decoupling the subsystem from every client. On the other hand, if the Facade is the only access point for the subsystem, it will limit the features and flexibility that **"power users"** may need.The clints uses the **_Façade_** object without knowing the implementation details.The **_Façade_** object should work like an advocate.But not like an all-knowing oracle or main object.
 
 
 ### Structure
 
+
 ### Rules of thumb
+* **_Adapter_** uses two existing interfaces and **_Façade_** uses a new interface.
+* **_Adapter_** and **_Façade_**  are both wrappers; but they are different kinds of wrappers. The intent of **_Façade_**  is to produce a simpler interface, and the intent of **_Adapter_** is to design to an existing interface.
+* **_Flyweight_** uses a lot of little objects but **_Façade_** uses only one interface to represent the whole system.
+* **_Abstract Factory_** can be used as an alternative to **_Façade_** to hide platform-specific classes.
+* **_Façade_** objects are often **Singletons** because only one  **_Façade_**  object is required.
 
 ### Code Example
 [C++ Code](https://ideone.com/qwpz2Q)
