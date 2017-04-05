@@ -15,10 +15,24 @@ Discussion :
 ----
 Interface of programming or coding style or requirements are changed .But a old formation or code or algorithms are 
 needed to be used .
-	Let me discuss about a old structure, a two pinned plug to charge any electrical device .Now a days we have our charger of three pins. If there is a situation of havinng no three pin plug but there are two pin plug everywhere .There is a solution that we can use an adapter of three to two pin. This can handle the incident. Here adapter is working like a device that makes a new perspective to adapt with an old phenomenon.
-	In programming Adapter is about creating an intermediate abstraction that translates or maps the old component to the new component. Clients call the Adapter objects methods and these methods redirects them to call the methods of the old class. This pattern can be implemented with inheritance.
-	Let us have a class legacy_rectangle where the Olddraw() method needs parameter as the upper left co-ordinate and lower right co-ordinate. If an new client needs to draw the rectangle by using the upper left co-ordinate and the hight and widht. Here a pproblem occurs .To solve this problem we need to use the method Olddraw() without creating any object of the legacy_rectangle. 
-	Here we can create a class adapter which inherits legacy_rectangle and by the methods and construcor of this class we can map the methods and constructor of the legacy_rectangle class. We can use a generic class rectangle which is inherited by the adapter class .
+
+Let me discuss about a old structure, a two pinned plug to charge any electrical device .Now a days we have our 
+charger of three pins. If there is a situation of havinng no three pin plug but there are two pin plug everywhere .There is 
+a solution that we can use an adapter of three to two pin. This can handle the incident. Here adapter is working like a 
+device that makes a new perspective to adapt with an old phenomenon.
+
+In programming Adapter is about creating an intermediate abstraction that translates or maps the old component to 
+the new component. Clients call the Adapter objects methods and these methods redirects them to call the methods of the old 
+class. This pattern can be implemented with inheritance.
+
+Let us have a class legacy_rectangle where the Olddraw() method needs parameter as the upper left co-ordinate and 
+lower right co-ordinate. If an new client needs to draw the rectangle by using the upper left co-ordinate and the hight and 
+widht. Here a pproblem occurs .To solve this problem we need to use the method Olddraw() without creating any object of the 
+legacy_rectangle. 
+
+Here we can create a class adapter which inherits legacy_rectangle and by the methods and construcor of this class 
+we can map the methods and constructor of the legacy_rectangle class. We can use a generic class rectangle which is 
+inherited by the adapter class .
 
 ![Adapter Souce Code](discuss.png)
 
@@ -30,11 +44,11 @@ will execute teh method Olddraw() .
 ![Adapter Structure UML Diagram](structure.png)
 
 ->New application-
-	->requires a interface to use doThat() method by different relevant parameters.
+->requires a interface to use doThat() method by different relevant parameters.
 ->Wrapper class-
-	->This class makes the mapping of the required method of LegacyComponent.
+->This class makes the mapping of the required method of LegacyComponent.
 ->LegacyComponent-
-	->LegacyComponent is the raw class containing the rae method doThat()
+->LegacyComponent is the raw class containing the rae method doThat()
 
 Rules of thumb :
 ----
