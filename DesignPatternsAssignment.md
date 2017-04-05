@@ -40,14 +40,14 @@ Student's name along with assigned design patterns
 ## Façade Design Pattern
 
 ### Intent
-The intent of Façade Design Pattern provides a unified interface to a set of interfaces in a subsystem.Façade provides an interface which easier to use.Façade wrap a comlpex subsystem with a easier interface.
+The intent of **_Façade Design Pattern_** provides a unified interface to a set of interfaces in a subsystem.Façade provides an interface which easier to use.Façade wrap a comlpex subsystem with a easier interface.
  
 
 ### Use the Façade pattern when
 
 ### Problem
 
-###Discussion
+### Discussion
 
 ### Structure
 
