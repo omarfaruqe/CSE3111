@@ -56,7 +56,7 @@ Student's name along with assigned design patterns
 
 ### Refreshing Your Mindset
 
-The pattern name *Visitor* is often misleading. People may think *Visitor Design Pattern* has something to do with visitation or iteration. But it is not. From Design Patterns,
+The pattern name *Visitor* is often misleading. People may think *Visitor Design Pattern* has something to do with visitation or iteration[1]. But it is not. From Design Patterns,
 
 > Visitor lets you define a new operation without changing the classes of the elements on which it operates.
 
@@ -157,7 +157,7 @@ The hierarchy is ready to accept any method that is similar to all the vehicles.
         void youGotACar(Car *c){
             cout << "A car is running on road." << endl;
         }
-        void youGotACopter(Copter *b){
+        void youGotACopter(Copter *c){
             cout << "You do not have enough money to run a copter" << endl;
         }
     };
@@ -177,11 +177,29 @@ We can add others similarly. I strongly recommend readers to implement a method 
     }
 
 ### Application: Double Dispatch
+TODO:
+### Refresh Your Mind, Revisited
 
-### Conclusion
+Did you answer my question in the motivation part? Oh, you forgot. Lets see again:
+> Now You are going to add a method *repaint* for all the sub-classes of *Vehicle*s. As the classes are complex we are not going to modify each sub-class
+every time we need to add an operation on them, right?
+
+Maybe you agreed with me. Said it aloud, **RIGHT**. But that's not true. The idea of complexity was to keep you free from unnecessary thinking of when we are going to use *Visitor* pattern.
+
+Stackoverflow has a very nice answer:
+
+> Let's think of a simple class hierarchy. I have classes 1, 2, 3 and 4 and methods A, B, C and D. Lay them out like in a spreadsheet: the classes are lines and the methods are columns.
+
+> Now, Object Oriented design presumes you are more likely to grow new classes than new methods, so adding more lines, so to speak, is easier. You just add a new class, specify what's different in that class, and inherits the rest.
+
+> Sometimes, though, the classes are relatively static, but you need to add more methods frequently -- adding columns. The standard way in an OO design would be to add such methods to all classes, which can be costly. The Visitor pattern makes this easy.
+
+### Sources
+A complete implementation can be found at *src/visitor/visitor.cpp*
 
 ### References
-
+http://www.artima.com/cppsource/top_cpp_aha_moments.html
+http://stackoverflow.com/questions/255214/when-should-i-use-the-visitor-design-pattern
 
  42. Shorif Mahmud Abdullah	(Object Pool)
  43. Shubha Shadik	(Observer or Publish/subscribe)
