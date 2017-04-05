@@ -102,7 +102,6 @@ public class MVCPatternDemo {
 
       controller.updateView();
    }
-```
    private static Student retriveStudentFromDatabase(){
       Student student = new Student();
       student.setName("Robert");
@@ -110,6 +109,7 @@ public class MVCPatternDemo {
       return student;
    }
 }
+```
 Verify the output:
 Student: 
 Name: Shahed
