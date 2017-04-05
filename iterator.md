@@ -22,7 +22,7 @@ The iterator pattern is implemented in Java’s collections like Arraylist and H
 
 ## Implementation
 
-![Alt text](C:\Users\Shad Munir\Pictures\Screenshots\iterator.png "iterator""width:30px height:30px")
+![iterator](https://cloud.githubusercontent.com/assets/25974205/24718899/8e94b3cc-1a59-11e7-8bf7-9ccaf3f51124.png)
 
 Iterator interface must have some methods like +first(),+next(),isDone() . These methods are used to traverse the list.Classes like ListIterator and MapIterator which implements Iterator interface have to implement those methods according to their requirement as they works on different data types.
 
