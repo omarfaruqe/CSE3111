@@ -44,17 +44,24 @@ will execute teh method Olddraw() .
 ![Adapter Structure UML Diagram](structure.png)
 
 ->New application-
+
 ->requires a interface to use doThat() method by different relevant parameters.
+
 ->Wrapper class-
+
 ->This class makes the mapping of the required method of LegacyComponent.
+
 ->LegacyComponent-
+
 ->LegacyComponent is the raw class containing the rae method doThat()
 
 Rules of thumb :
 ----
 ->Adapter makes things work after they're designed; Bridge makes them work before they are.
+
 ->Bridge is designed up-front to let the abstraction and the implementation vary independently. Adapter is retrofitted
 to make unrelated classes work together.
+
 ->Adapter provides a different interface to its subject. Proxy provides the same interface. Decorator provides an
 enhanced interface.
 
