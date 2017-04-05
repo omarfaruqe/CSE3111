@@ -23,8 +23,7 @@ An example of composite pattern is given below. Here “back end developer” an
 
 
 Now the corresponding class diagram showing attributes and operations of leaf-nodes and composite components is shown below:
-![](C:\Users\Aashique\Desktop\composite pattern/class_diagram.png)
-
+![class_diagram](https://cloud.githubusercontent.com/assets/26010300/24720617/8854a3ea-1a5f-11e7-84ff-767a064a55ec.png)
 A corresponding java code implementing this example by using composite pattern is given below:
 **IEmployee.java:**
 ```java
