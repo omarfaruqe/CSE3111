@@ -51,14 +51,6 @@ import java.io.FileReader; <br>
 import java.io.IOException; <br>
 import java.util.Properties; <br>
 
-/* <br>
- * public void list(PrintStream out) <br>
- *  <br>
- * Parameters: <br>
- * ---------- <br>
- *  <br>
- * out - an output stream. <br>
- */ <br>
 class PropertiesDemo <br>
 { <br>
 
@@ -83,7 +75,6 @@ class PropertiesDemo <br>
        */
       p.list(System.out); 
 
-    } 
-
-  } 
-} 
+    } <br>
+  }  <br>
+} <br>
