@@ -28,7 +28,8 @@ A criteria interface contains the method to generate the lists. Lists are create
 
 ![Structure of Criteria Pattern of filtering people based on gender and/or marrital status](filter.jpg Structure of Filter Pattern)
 
-###Check List-
+Check List
+-
 1. Identify the criteria.
 2. Specify the signature for that criteria in an interface.
 3. Bury the alternative implementation details in derived classes.
