@@ -1,4 +1,4 @@
-#_MVC Pattern_#
+# _MVC Pattern_ #
 
 
 # Introduction:
@@ -113,7 +113,7 @@ public class MVCPatternDemo {
    }
 }
 ```
-#####Verify the output:
+##### Verify the output:
 Student: 
 Name: Shahed
 Roll No: 21
