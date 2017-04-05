@@ -57,7 +57,7 @@ class PropertiesDemo <br>
   public static void main(String[] args) throws IOException <br>
   { <br>
 
-    try (FileReader fileReader = new FileReader("db.properties");) <br>
+    try (FileReader fileReader = new FileReader("db.properties");) 
     { 
 
       Properties p = new Properties(); 
@@ -75,6 +75,6 @@ class PropertiesDemo <br>
        */
       p.list(System.out); 
 
-    } <br>
+    } 
   }  <br>
 } <br>
