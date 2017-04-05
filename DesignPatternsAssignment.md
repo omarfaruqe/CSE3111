@@ -149,7 +149,7 @@ ConcreatePrototype : Cloning implementation.
 
 In here clone operation crate a instatiate class which where client request for new object and sent the request for that type of object.ConcreatePrototy handle this using clone() method. 
 
-###Example:
+### Example:
 
 There is client who is call for a animal type instance then there client tranfer to the animal subclass and from there are different type of classes inherit from the animal class and from there specific clone transfar to the client. Here is the benifit is there only create only secific instance clone for this reason time complexity is relatively getting low. 
 
