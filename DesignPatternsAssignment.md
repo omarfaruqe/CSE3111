@@ -62,11 +62,22 @@ The pattern name *Visitor* is often misleading. People may think *Visitor Design
 
 So, Before you read the rest of the article, I strongly recommend you to reset your mind if your had similar assertion that *Visitor* has something to do with visitation. Understanding the pattern will be easier with it.
 
+### Motivation
+
+Let's you have a hierarchy of *Vehicle*s. You have 3 sub-classes of *Vehicle*s Boat, Car and Copter. Now all of their usual functions are defined. For simplicity, lets assume their implementation is very complex(Yes, complexity can simplify things, we will see later).
+
+Now You are going to add a method *repaint* for all the sub-classes of *Vehicle*s. As the classes are complex we are not going to modify each sub-class
+every time we need to add an operation on them, right?
+
+But What can we do? If you are programming in a language that support *dynamic method dispatch*, then, *visitor* pattern comes to a rescue.
+
 ### The Implementation
 
 ### Application: Double Dispatch
 
 ### Conclusion
+
+### References
 
 
  42. Shorif Mahmud Abdullah	(Object Pool)
