@@ -198,7 +198,7 @@ Stackoverflow has a very nice answer:
 A complete implementation can be found at *src/visitor/visitor.cpp*
 
 ### References
-http://www.artima.com/cppsource/top_cpp_aha_moments.html
+http://www.artima.com/cppsource/top_cpp_aha_moments.html  
 http://stackoverflow.com/questions/255214/when-should-i-use-the-visitor-design-pattern
 
  42. Shorif Mahmud Abdullah	(Object Pool)
