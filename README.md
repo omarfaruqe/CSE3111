@@ -27,10 +27,10 @@ The main purpose Object Pool design pattern is that if instances of a class can 
  - Pooled Object
   -  The Pooled Object class is the type that is expensive or slow to instantiate, or that has limited availability, so is to be held in the object pool.
  - Pool 
-  -  The Pool class is the most important class in the object pool design pattern. It controls access to the pooled objects, maintaining a list of available objects and a collection of objects that have already been requested from the pool and are still in use. The pool also ensures that objects that have been released are returned to a suitable state, ready for the next time they are requested.
+  - It's check for available object in the pool if this object exist then it pull from the pool class otherwise it's create a new instance.
 ### Rules of thumb
-  - Object pool design pattern are normally implemented as singleton.
-  - The Factory Method pattern are used to encapsulate the creation logic for object pool design.
+  - it's normally implemented as singleton.
+  - Factory Method pattern encapsulate the creation logic.
 ### Sample code
 
 ```
