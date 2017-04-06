@@ -1,15 +1,16 @@
 # Abstract factory
 
 ### Defination :
-Abstract Factory patterns work around a super-factory which creates other factories. This factory is also called as factory of factories. This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object.
+Abstract Factory pattern is an interface is responsible for creating a new factory of related object without explicitly specifying their classes. Each generated factory can give the objects as per the Factory pattern.
 
-In Abstract Factory pattern an interface is responsible for creating a factory of related objects without explicitly specifying their classes. Each generated factory can give the objects as per the Factory pattern.
+Abstract pattern works a super-factory that creates other factory.so we can say this factory is also known as factory of factories. This kind of design pattern come under creational pattern as this pattern provides one of the best ways to create an object.
 
 ### Discussion :
 
-Provide a level of indirection that abstracts the creation of families of related or dependent objects without directly specifying their concrete classes. The "factory" object has the responsibility for providing creation services for the entire platform family. Clients never create platform objects directly, they ask the factory to do that for them.
+The mechanism make  product family easy because the class of that factory object appears only once in the application in where it is being instantiated. This application can be wholesale replace the  family of product simply by instantiating a different concrete in instance of the abstract factory.
 
-This mechanism makes exchanging product families easy because the specific class of the factory object appears only once in the application - where it is instantiated. The application can wholesale replace the entire family of products simply by instantiating a different concrete instance of the abstract factory.
+
+Provide the level of indirection that is abstract the creation of families of the related or the dependent object without directly specify their concrete class. The "factory" object have the responsibility for providing creation services for the entire platform famiies. Client never creates platform objects directly, they ask the factory to do that for them.
 
 Because the service provided by the factory object is so pervasive, it is routinely implemented as a Singleton.
 
@@ -31,15 +32,17 @@ public class FactoryProducer { <br>
 # Template Method
 
 ### Defination :
-In Template pattern, an abstract class exposes defined way(s)/template(s) to execute its methods. Its subclasses can override the method implementation as per need but the invocation is to be in the same way as defined by an abstract class. This pattern comes under behavior pattern category.
+In the Template pattern method, the abstract classes expose defined way to execute this method. Its subclasses can be override the method implementation as per need but that invocation is to be in the same way as defined by the abstract class. This template patterns come under pattern category.
 
 ### Discussion :
 
-The component designer decides which steps of an algorithm are invariant (or standard), and which are variant (or customizable). The invariant steps are implemented in an abstract base class, while the variant steps are either given a default implementation, or no implementation at all. The variant steps represent "hooks", or "placeholders", that can, or must, be supplied by the component's client in a concrete derived class.
+This Method is being used prominently in framework.Every framework implement the invariant pieces of the domain's architecture,and defines placeholders for all necessaries  client customization options. So doing, the framework becomes the center of  univers, and the client customizations are simply the third rock from the sun. This inverted control structure has been affectionately labelled "the Hollywood principle , dont call us, we will call you.
+
+The component designer decide in which steps of the algorithm are invariant, and which are variant. The invariant steps are implemented in an abstract base class, while the variant steps are either given a default implementation, or no implementation at all. The variant steps represent hooks that can be supplied by the component's client in a concrete derived class.
 
 The component designer mandates the required steps of an algorithm, and the ordering of the steps, but allows the component client to extend or replace some number of these steps.
 
-Template Method is used prominently in frameworks. Each framework implements the invariant pieces of a domain's architecture, and defines "placeholders" for all necessary or interesting client customization options. In so doing, the framework becomes the "center of the universe", and the client customizations are simply "the third rock from the sun". This inverted control structure has been affectionately labelled "the Hollywood principle" - "don't call us, we'll call you".
+
 
 
 ### Code Examples :
