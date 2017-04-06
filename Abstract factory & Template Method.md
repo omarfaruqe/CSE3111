@@ -38,9 +38,9 @@ In the Template pattern method, the abstract classes expose defined way to execu
 
 This Method is being used prominently in framework.Every framework implement the invariant pieces of the domain's architecture,and defines placeholders for all necessaries  client customization options. So doing, the framework becomes the center of  univers, and the client customizations are simply the third rock from the sun. This inverted control structure has been affectionately labellel the Hollywood, dont call us, we will call you.
 
-The component designer decide in which steps of the algorithm are invariant, and which are variant. The invariant step are being implemented in the abstract base class, while the variant steps are either given a default implementation, or no implementation at all. The variant steps represent hooks that can be supplied by the component's client in a concrete derived class.
+The component designer decide in which steps of the algorithm are invariant, and which are variant. The invariant step are being implemented in abstract base class when the variant steps are either given a default implementation. The variant steps represent hooks that can be supplied by the component's client in a concrete derived class.
 
-The component designer mandates the required steps of an algorithm, and the ordering of the steps, but allows the component client to extend or replace some number of these steps.
+The component designer mandates the required steps of an algorithm, and the ordering of the steps but allows the component clients to extend some number of steps.
 
 
 
