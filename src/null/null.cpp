@@ -1,7 +1,6 @@
 #include <string>
 #include <iostream>
 #include <sstream>
-#include <bits/stdc++.h>
 using namespace std;
 
 //Forward declaration of object
