@@ -8,7 +8,7 @@
 Monitor Object pattern, also known as Thread-safe Passive Object or
 Code Locking pattern
 The Monitor Object pattern synchronizes method execution
-to ensure only one method runs within an object at a time.
+for ensuring only the method that runs within an object at .
 It also allows an object’s methods to cooperatively schedule
 their execution sequences.
 
@@ -38,7 +38,7 @@ It helps to cater for cooperative execution scheduling
 All of the hard work is offloaded to the object itself, clients are not concerned with synchronization issues.
 
 - Cooperative execution scheduling: 
-Monitor conditions are used to suspend / resume method execution.
+Monitor condition is only used to suspend/resume method execution.
 Reduced performance overhead: Notifications over inefficient polling.
 
 
@@ -80,15 +80,15 @@ There are four participants in the Monitor Object pattern:
  
 ###Monitor object
 
-A monitor object exports one or more methods to clients. To protect the internal state of the monitor object from uncontrolled changes or race conditions, all clients must access the monitor object only through these methods. Each method executes in the thread of the client that invokes it because a monitor object does not have its own thread of control.2 For instance, the consumer handler’s message queue in the Gateway application can be implemented as a monitor object. 
+A monitor object exports one or more methods to clients. To protect the internal state of the monitor object from uncontrolled changes or are racing conditions, all clients must access the monitor object only through these methods. Each method executes in the thread of the client that invokes it because a monitor object doesn't have to be its own thread of control.2 For instance, the consumer handler’s message queue in the Gateway application can be implemented as a monitor object. 
 
 ###Synchronized methods  
 
-Synchronized methods implement the thread-safe services exported by a monitor object. To prevent race conditions, only one synchronized method can execute within a monitor at any point in time, regardless of the number of threads that invoke the object’s synchronized methods concurrently or the number of synchronized methods in the object’s class. For instance, the put and get operations on the consumer handler’s message queue should be synchronized methods to ensure that routing messages can be inserted and removed simultaneously by multiple threads without corrupting a queue’s internal state.
+Synchronized methods have most to implement the thread-safe services control exported by a monitor object. To prevent race conditions, only one synchronized method can execute within a monitor at any point in time, regardless of the number and also of the threads that invoking the object’s synchronized methods concurrently or the number of synchronized methods in the object’s class. For instance, the put and get operations on the consumer handler’s message queue should be synchronized methods to ensure that routing messages can be inserted and removed simultaneously by multiple threads and without corrupting a queue’s internals state.
 
 
 ###Monitor lock 
-Each monitor object contains its own monitor lock. Synchronized methods use this monitor lock to serialize method invocations on a per-object basis. Each synchronized method must acquire/release the monitor lock when the method enters/exits the object, respectively. This protocol ensures the monitor lock is held whenever a method performs operations that access or modify its object’s state. For instance, a Thread Mutex [3] could be used to implement the message queue’s monitor lock. Monitor condition  Multiple synchronized methods running in separate threads can cooperatively schedule their execution sequences by waiting for and notifying each other via monitor conditions associated with their monitor object. 
+Each monitor object contains its own monitor lock. Synchronized methods use this monitor lock to serialize method invocations on a per-object basis and Each of the synchronized method must acquire/release the monitor lock and again when the method enters/exits the object,respectively. This protocol ensures the monitor lock is held whenever a method performing the operations that access or to be  modified its object’s state. For instance, a Thread Mutex could be used to implement the message queue’s monitor lock. Monitor condition Multiple synchronized methods are running into the separate threads can cooperatively schedule their execution sequences by waiting for and notifying each other via monitor conditions associated with their monitor object. 
 
 
 
@@ -121,7 +121,8 @@ public class FilthyToilet implements Toilet {
 
 <br>
 
-.. has unavoidable consequences: console output after having run the FilthyToiletMultiThreadedTest.java:
+.. there are some unavoidable consequences in here and they are given below:
+ console output after having run the FilthyToiletMultiThreadedTest.java:
 
 The toilet was flooded 25 times under a moderate load.
 The toilet was flooded 38 times under a heavy load.
