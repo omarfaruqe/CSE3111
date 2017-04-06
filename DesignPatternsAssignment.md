@@ -52,6 +52,14 @@ Student's name along with assigned design patterns
  40. Multiton Shahedul Hasan	(MVC Pattern, Proxy)
  41. Shakil Ahamed	(Null Object, Visitor)
 
+## Null Object Design Pattern
+
+### Motivation
+
+### Implementation
+
+### Comments
+
 ## Visitor Design Pattern
 
 ### Refreshing Your Mindset
