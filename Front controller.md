@@ -1,10 +1,10 @@
-#FRONT CONTROLLER
+# FRONT CONTROLLER
 
 **Defination:**
              The Front controller provides a centralized request handling mechanism so that all requests will be handled by a single handler. Front controller is a centralized entry point for handling requests. Front controller will do the authentication/ authorization/ logging or tracking of request and then pass the requests to corresponding handlers.
 
 **Class diagram:**
-
+![class diagram](https://cloud.githubusercontent.com/assets/26034726/24736727/9ab40caa-1aab-11e7-8f9f-c8caf2936372.PNG)
 
 **Various Strategies for Front Controller:**
 
@@ -21,7 +21,7 @@ JSP strategy is the JSP acts as controller.JSP strategy not preferred since JSP 
 we are going to create a *FrontController* and *Dispatcher* to act as Front Controller and Dispatcher correspondingly. *HomeView* and *StudentView* represent various views for which requests can come to front controller.
 
 **FrontControllerPatternDemo:**
- 
+![front](https://cloud.githubusercontent.com/assets/26034726/24736743/b3bec3f2-1aab-11e7-9145-41425ba84e1a.PNG) 
 
 
 **Step 1
