@@ -54,11 +54,41 @@ Student's name along with assigned design patterns
 
 ## Null Object Design Pattern
 
+### Objective
+
+Utility classes often provide different methods of doing the same task. Depending on the implementation, these classes may have the no operation(**NOP**) property. What is meant by NOP here is that, there may be some default behavior that is expected when there is no implementation of these object found. When there is nothing, there is **Null**.
+
 ### Motivation
+
+Often we need to code a *Serializer* for our data structure which will be saved in the disk, or transmitted over the network. Lets assume we have a data structure named *FileInfo* which will be serialized. A *Serializer* is consists of two primary method, *serialize* and *unserialize*.
+
+As long as these two method can work with each other, we do not care how they are implemented. So, there can be multiple implementation.
+
+Lets think, we haven't decided yet, how we will implement the *Serializer*( There can be multiple serializer, one for network transmission, one for saving on the disk etc). How can we work with other codes which uses *serializer*?
+
+### Solution
+
+One way is to pass a Null reference as a serializer to the *FileInfo* structure. Then inside the *FileInfo* will check whether there is an *Serializer* exist or not. If the reference is Null, it will return an default serialization, otherwise passes the responsibility to the *Serializer*.
+
+Pretty easy, right? But we are letting the *FileInfo* to decide how to *serialize* itself. Which breaks the single responsibility principle.
+
+The solution that we will discuss here, is to use a Default implementation of a *Serializer* class. Which is known as *Null Object* Design pattern.
 
 ### Implementation
 
+TODO
+
+### Sources
+
+The complete working implementation can be found at *'/src/null/null.cpp'*
+
 ### Comments
+
+TODO
+
+### References
+
+TODO
 
 ## Visitor Design Pattern
 
