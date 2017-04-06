@@ -11,7 +11,6 @@ The mechanism make  product family easy because the class of that factory object
 
 
 Provide the level of indirection that is abstract the creation of families of the related or the dependent object without directly specify their concrete class. The factory object have the responsibility for providing creation services for the entire platform famiies. Client never creates platform objects directly, they ask the factory to do that for them.
-
 Because the service provided by the factory object is so pervasive, it is routinely implemented as a Singleton.
 
 
@@ -38,9 +37,9 @@ In the Template pattern method, the abstract classes expose defined way to execu
 
 This Method is being used prominently in framework.Every framework implement the invariant pieces of the domain's architecture,and defines placeholders for all necessaries  client customization options. So doing, the framework becomes the center of  univers, and the client customizations are simply the third rock from the sun. This inverted control structure has been affectionately labellel the Hollywood, dont call us, we will call you.
 
-The component designer decide in which steps of the algorithm are invariant, and which are variant. The invariant step are being implemented in abstract base class when the variant steps are either given a default implementation. The variant steps represent hooks that can be supplied by the component's client in a concrete derived class.
+The component designer decide in which steps of the algorithm are invariant, and which are variant. The invariant step are being implemented in abstract base class when the variant steps are either given a default implementation. The variant steps represent hooks that can be supplied by the component's client in the concrete derived classes.
 
-The component designer mandates the required steps of an algorithm, and the ordering of the steps but allows the component clients to extend some number of steps.
+In component designer mandate the required steps of the algorithm and the ordering of the step but allows the component clients to extend some number of steps.
 
 
 
