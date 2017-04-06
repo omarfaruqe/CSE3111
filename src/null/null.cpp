@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 #include <sstream>
+#include <bits/stdc++.h>
 using namespace std;
 
 //Forward declaration of object
@@ -25,12 +26,12 @@ class FileInfo
 public:
     string name, parent_directory;
     int size;
-    FileInfo(string n, int p, int s){
+    FileInfo(string n, string p, int s){
         name = n;
         parent_directory = p;
         size = s;
     }
-    string serialize(Serializer *sz){
+    void serialize(Serializer *sz){
         cout << sz->serialize(this) << endl;
     }
 };
@@ -63,8 +64,8 @@ class JSONSerializer: public Serializer
 public:
     string serialize(FileInfo *fi){
         string res = "";
-        res += "{ name: "+fi->name+", ";
-        res += "parent: "+fi->parent_directory+", ";
+        res += "{ name: \""+fi->name+"\", ";
+        res += "parent: \""+fi->parent_directory+"\", ";
         res += "size: "+tostring(fi->size)+" }";
 
         return res;
@@ -73,5 +74,9 @@ public:
 
 int main()
 {
-    FileInfo file("")
+    FileInfo file("500 Miles.mp3", "English Songs", 5000);
+    file.serialize(new NullSerializer());
+    file.serialize(new JSONSerializer());
+
+    return 0;
 }
