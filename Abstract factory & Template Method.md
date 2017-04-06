@@ -10,7 +10,7 @@ Abstract pattern works a super-factory that creates other factory.so we can say 
 The mechanism make  product family easy because the class of that factory object appears only once in the application in where it is being instantiated. This application can be wholesale replace the  family of product simply by instantiating a different concrete in instance of the abstract factory.
 
 
-Provide the level of indirection that is abstract the creation of families of the related or the dependent object without directly specify their concrete class. The "factory" object have the responsibility for providing creation services for the entire platform famiies. Client never creates platform objects directly, they ask the factory to do that for them.
+Provide the level of indirection that is abstract the creation of families of the related or the dependent object without directly specify their concrete class. The factory object have the responsibility for providing creation services for the entire platform famiies. Client never creates platform objects directly, they ask the factory to do that for them.
 
 Because the service provided by the factory object is so pervasive, it is routinely implemented as a Singleton.
 
@@ -36,9 +36,9 @@ In the Template pattern method, the abstract classes expose defined way to execu
 
 ### Discussion :
 
-This Method is being used prominently in framework.Every framework implement the invariant pieces of the domain's architecture,and defines placeholders for all necessaries  client customization options. So doing, the framework becomes the center of  univers, and the client customizations are simply the third rock from the sun. This inverted control structure has been affectionately labelled "the Hollywood principle , dont call us, we will call you.
+This Method is being used prominently in framework.Every framework implement the invariant pieces of the domain's architecture,and defines placeholders for all necessaries  client customization options. So doing, the framework becomes the center of  univers, and the client customizations are simply the third rock from the sun. This inverted control structure has been affectionately labellel the Hollywood, dont call us, we will call you.
 
-The component designer decide in which steps of the algorithm are invariant, and which are variant. The invariant steps are implemented in an abstract base class, while the variant steps are either given a default implementation, or no implementation at all. The variant steps represent hooks that can be supplied by the component's client in a concrete derived class.
+The component designer decide in which steps of the algorithm are invariant, and which are variant. The invariant step are being implemented in the abstract base class, while the variant steps are either given a default implementation, or no implementation at all. The variant steps represent hooks that can be supplied by the component's client in a concrete derived class.
 
 The component designer mandates the required steps of an algorithm, and the ordering of the steps, but allows the component client to extend or replace some number of these steps.
 
