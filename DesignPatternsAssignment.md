@@ -7,14 +7,14 @@ you will follow this style of writing but you need to add programming code as we
 ----------
 
  
-#Balking Design Pattern 
+ # Balking Design Pattern 
 
-######Imagine standing in a queue to get a train ticket. There is just a single counter. And there are five queues of ticket-buyers. Can you guess what will happen? Add the fact that the train will depart within 15 minutes and everyone wants the ticket to that particular train.
+###### Imagine standing in a queue to get a train ticket. There is just a single counter. And there are five queues of ticket-buyers. Can you guess what will happen? Add the fact that the train will depart within 15 minutes and everyone wants the ticket to that particular train.
 
 
-######Let's feel the pain of the poor ticket agent. 
+###### Let's feel the pain of the poor ticket agent. 
 
-#####*But! What if the ticket agent knew the balking design pattern and processed the multiple threads of people in a synchronized manner? Yes, problem solved!*
+##### *But! What if the ticket agent knew the balking design pattern and processed the multiple threads of people in a synchronized manner? Yes, problem solved!*
 
 
 
