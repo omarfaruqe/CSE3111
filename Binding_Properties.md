@@ -23,6 +23,9 @@
 
 #### It is reduced by decresing the transformation function of binding properties to the solution and then we can take function as a Type conversion.
 
+![binding_properties_pattern](https://cloud.githubusercontent.com/assets/26067522/24737610/c9e9c0cc-1ab1-11e7-9196-3c8641f62091.png)
+
+
 ### Binding Multiple Properties:
 
 ### Resulting context: automatically the properties are held together.
