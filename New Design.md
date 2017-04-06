@@ -40,8 +40,6 @@ classSingleton {
 
  }
 
-/\* 1st version: creates multiple instance if two thread access this method simultaneously \*/
-
 publicstaticSingletongetInstance() {
 
         if (\_instance ==null) {
@@ -53,13 +51,7 @@ publicstaticSingletongetInstance() {
         return \_instance;
 
 }
-
-/\*2nd version : this definitely thread-safe and only
-
-     \* creates one instance of Singleton on concurrent environment
-
-     \* but unnecessarily expensive due to cost of synchronization at every call.\*/
-
+   
 publicstaticsynchronizedSingletongetInstanceTS(){
 
       if (\_instance ==null) {
@@ -71,18 +63,6 @@ publicstaticsynchronizedSingletongetInstanceTS(){
        return \_instance;
 
  }
-
-/\*3rd version : An implementation of double checked locking of Singleton.
-
-     \* Intention is to minimize cost of synchronization and  improve performance,
-
-     \* by only locking critical section of code, the code which creates instance of Singleton class.
-
- \* By the way this is still broken, if we don&#39;t make \_instance volatile, as another thread can
-
-     \* see a half initialized instance of Singleton.
-
-     \*/
 
  publicstaticSingletongetInstanceDC() {
 
