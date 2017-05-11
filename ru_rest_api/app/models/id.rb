@@ -1,0 +1,2 @@
+class Id < ApplicationRecord
+end
