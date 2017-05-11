@@ -1,0 +1,2 @@
+class IctCentre < ApplicationRecord
+end
