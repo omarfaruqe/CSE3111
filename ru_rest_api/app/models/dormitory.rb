@@ -1,0 +1,2 @@
+class Dormitory < ApplicationRecord
+end
