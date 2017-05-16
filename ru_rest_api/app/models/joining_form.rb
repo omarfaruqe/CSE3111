@@ -1,0 +1,2 @@
+class JoiningForm < ApplicationRecord
+end
