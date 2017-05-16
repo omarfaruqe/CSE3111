@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170511080934) do
+ActiveRecord::Schema.define(version: 20170516042611) do
+
+  create_table "halls", force: :cascade do |t|
+    t.string "total_seat"
+    t.string "availible"
+    t.string "seat"
+    t.string "new_reculted_list"
+    t.string "border_info"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "infos", force: :cascade do |t|
     t.string "date"

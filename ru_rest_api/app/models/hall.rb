@@ -1,0 +1,2 @@
+class Hall < ApplicationRecord
+end
