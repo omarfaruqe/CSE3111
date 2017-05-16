@@ -23,10 +23,10 @@ require 'rails_helper'
 # removed from Rails core in Rails 5, but can be added back in via the
 # `rails-controller-testing` gem.
 
-RSpec.describe InfosController, type: :controller do
+RSpec.describe UsersController, type: :controller do
 
   # This should return the minimal set of attributes required to create a valid
-  # Info. As you add validations to Info, be sure to
+  # User. As you add validations to User, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
     skip("Add a hash of attributes valid for your model")
@@ -38,12 +38,12 @@ RSpec.describe InfosController, type: :controller do
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
-  # InfosController. Be sure to keep this updated too.
+  # UsersController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
   describe "GET #index" do
     it "returns a success response" do
-      info = Info.create! valid_attributes
+      user = User.create! valid_attributes
       get :index, params: {}, session: valid_session
       expect(response).to be_success
     end
@@ -51,33 +51,33 @@ RSpec.describe InfosController, type: :controller do
 
   describe "GET #show" do
     it "returns a success response" do
-      info = Info.create! valid_attributes
-      get :show, params: {id: info.to_param}, session: valid_session
+      user = User.create! valid_attributes
+      get :show, params: {id: user.to_param}, session: valid_session
       expect(response).to be_success
     end
   end
 
   describe "POST #create" do
     context "with valid params" do
-      it "creates a new Info" do
+      it "creates a new User" do
         expect {
-          post :create, params: {info: valid_attributes}, session: valid_session
-        }.to change(Info, :count).by(1)
+          post :create, params: {user: valid_attributes}, session: valid_session
+        }.to change(User, :count).by(1)
       end
 
-      it "renders a JSON response with the new info" do
+      it "renders a JSON response with the new user" do
 
-        post :create, params: {info: valid_attributes}, session: valid_session
+        post :create, params: {user: valid_attributes}, session: valid_session
         expect(response).to have_http_status(:created)
         expect(response.content_type).to eq('application/json')
-        expect(response.location).to eq(info_url(Info.last))
+        expect(response.location).to eq(user_url(User.last))
       end
     end
 
     context "with invalid params" do
-      it "renders a JSON response with errors for the new info" do
+      it "renders a JSON response with errors for the new user" do
 
-        post :create, params: {info: invalid_attributes}, session: valid_session
+        post :create, params: {user: invalid_attributes}, session: valid_session
         expect(response).to have_http_status(:unprocessable_entity)
         expect(response.content_type).to eq('application/json')
       end
@@ -90,27 +90,27 @@ RSpec.describe InfosController, type: :controller do
         skip("Add a hash of attributes valid for your model")
       }
 
-      it "updates the requested info" do
-        info = Info.create! valid_attributes
-        put :update, params: {id: info.to_param, info: new_attributes}, session: valid_session
-        info.reload
+      it "updates the requested user" do
+        user = User.create! valid_attributes
+        put :update, params: {id: user.to_param, user: new_attributes}, session: valid_session
+        user.reload
         skip("Add assertions for updated state")
       end
 
-      it "renders a JSON response with the info" do
-        info = Info.create! valid_attributes
+      it "renders a JSON response with the user" do
+        user = User.create! valid_attributes
 
-        put :update, params: {id: info.to_param, info: valid_attributes}, session: valid_session
+        put :update, params: {id: user.to_param, user: valid_attributes}, session: valid_session
         expect(response).to have_http_status(:ok)
         expect(response.content_type).to eq('application/json')
       end
     end
 
     context "with invalid params" do
-      it "renders a JSON response with errors for the info" do
-        info = Info.create! valid_attributes
+      it "renders a JSON response with errors for the user" do
+        user = User.create! valid_attributes
 
-        put :update, params: {id: info.to_param, info: invalid_attributes}, session: valid_session
+        put :update, params: {id: user.to_param, user: invalid_attributes}, session: valid_session
         expect(response).to have_http_status(:unprocessable_entity)
         expect(response.content_type).to eq('application/json')
       end
@@ -118,11 +118,11 @@ RSpec.describe InfosController, type: :controller do
   end
 
   describe "DELETE #destroy" do
-    it "destroys the requested info" do
-      info = Info.create! valid_attributes
+    it "destroys the requested user" do
+      user = User.create! valid_attributes
       expect {
-        delete :destroy, params: {id: info.to_param}, session: valid_session
-      }.to change(Info, :count).by(-1)
+        delete :destroy, params: {id: user.to_param}, session: valid_session
+      }.to change(User, :count).by(-1)
     end
   end
 
