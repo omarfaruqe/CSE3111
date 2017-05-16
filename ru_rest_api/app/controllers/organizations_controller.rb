@@ -46,6 +46,6 @@ class OrganizationsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def organization_params
-      params.require(:organization).permit(:List)
+      params.permit(:List)
     end
 end
