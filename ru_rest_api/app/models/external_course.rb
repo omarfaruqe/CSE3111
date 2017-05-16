@@ -1,0 +1,2 @@
+class ExternalCourse < ApplicationRecord
+end
