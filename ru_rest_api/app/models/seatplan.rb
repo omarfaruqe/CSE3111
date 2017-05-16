@@ -1,0 +1,2 @@
+class Seatplan < ApplicationRecord
+end
