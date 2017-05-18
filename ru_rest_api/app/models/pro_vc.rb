@@ -1,0 +1,2 @@
+class ProVc < ApplicationRecord
+end
