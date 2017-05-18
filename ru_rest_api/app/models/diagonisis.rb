@@ -1,0 +1,2 @@
+class Diagonisis < ApplicationRecord
+end
