@@ -1,0 +1,46 @@
+#This is an api for varsity. To implement GET the corresponding Url is
+>  http://localhost:3000/accomodations
+
+One can also implement GET operation by putting 'id' at the end poriton of the url just to get information correspond to that 'id'. So in this case the url will be as follows :
+>  http://localhost:3000/accomodations/id
+
+
+#To POST anything the url is same as the GET but you have to pass the corresponding paramters. It is expected to pass the parameters in json format. An example is given below:
+>{
+	"categories" : "foreign students"
+}
+
+
+#For DELETE operation the url is as below:
+> http://localhost:3000/accomodations/id
+
+# For PATCH operation you the url is same as DELETE which is as follows:
+> http://localhost:3000/accomodations/id
+but you have to pass the information in the corresponding field that you want to edit.
+Suppose we want to edit some information in a feild which looks like as below
+
+{
+	"id" : 2
+	"categories" : "teachers_quarter"
+	"created_at" : "2017-05-11T05:30:56.467Z"
+	"updated_at" : "2017-05-11T05:30:56.467Z"
+}
+
+and we want "categories" field to be changed as "teachers_resident". To do so we implement PATCH operation where the url should be
+http://localhost:3000/accomodations/2
+and the passing parameter will be
+
+{
+	"id" : 2
+	"categories" : "teachers_resident"
+}
+
+Now if we implement GET opearation with the url http://localhost:3000/accomodations/2, we wil see that the information in the "categories" field has changed.
+
+
+{
+	"id" : 2
+	"categories" : "teachers_resident"
+	"created_at" : "2017-05-11T05:30:56.467Z"
+	"updated_at" : "2017-05-11T05:30:56.467Z"
+}
