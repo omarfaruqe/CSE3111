@@ -1,0 +1,2 @@
+class TreasurerDetail < ApplicationRecord
+end
