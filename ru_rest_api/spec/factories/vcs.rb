@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :vc do
-    name "MyString"
-    department "MyString"
-    year "MyString"
+    name { Faker::Lorem.word }
+    department { Faker::Lorem.word }
+    year { Faker::Number.number(4) }
   end
 end
