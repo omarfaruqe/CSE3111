@@ -1,14 +1,3 @@
-#require 'rails_helper'
-
-#RSpec.describe "TeachersQuarters", type: :request do
-#  describe "GET /teachers_quarters" do
-#    it "works! (now write some real specs)" do
- #     get teachers_quarters_path
- #     expect(response).to have_http_status(200)
- #   end
- # end
-#end
-
 
 require 'rails_helper'
 
@@ -17,7 +6,7 @@ RSpec.describe 'Teachers_Quarter API', type: :request do
   let!(:teachers_quarters) { create_list(:teachers_quarter, 10) }
   let(:teachers_quarter_id) { teachers_quarters.first.id }
 
-  # Test suite for GET /vcs
+  # Test suite for GET /teachers_quarters
   describe 'GET /teachers_quarters' do
     # make HTTP get request before each example
     before { get '/teachers_quarters' }
@@ -33,35 +22,38 @@ RSpec.describe 'Teachers_Quarter API', type: :request do
     end
   end
 
-  # Test suite for GET /vcs/:id
- # describe 'GET /vcs/:id' do
-  #  before { get "/vcs/#{vc_id}" }
+##
+  # Test suite for GET /teachers_quarters/:id
+  #describe 'GET /teachers_quarters/:id' do
+   # before { get "/teachers_quarters/#{teachers_quarter_id}" }
 
-  #  context 'when the record exists' do
-   #   it 'returns the vc' do
-   #     expect(json).not_to be_empty
-   #     expect(json['id']).to eq(vc_id)
-   #  end
+   # context 'when the record exists' do
+     # it 'returns the teachers_quarter' do
+      #  expect(json).not_to be_empty
+      #  expect(json['id']).to eq(teachers_quarter_id)
+     #end
 
     #  it 'returns status code 200' do
-    #    expect(response).to have_http_status(200)
-    #  end
+     #   expect(response).to have_http_status(200)
+     # end
     #end
 
-   # context 'when the record does not exist' do
-    #  let(:vc_id) { 100 }
+    #context 'when the record does not exist' do
+     # let(:teachers_quarter_id) { 100 }
 
-    #  it 'returns status code 404' do
-    #    expect(response).to have_http_status(404)
-    #  end
+      #it 'returns status code 404' do
+      #  expect(response).to have_http_status(404)
+     # end
 
-    #  it 'returns a not found message' do
-    #    expect(response.body).to match(/Couldn't find Vc/)
-    #  end
-   # end
- # end
+     # it 'returns a not found message' do
+     #   expect(response.body).to match(/Couldn't find teachers_quarter/)
+     #end
+    #end
+  #end
 
-  # Test suite for POST /vcs
+  ##
+
+  # Test suite for POST /teachers_quarters
   describe 'POST /teachers_quarters' do
     # valid payload
     let(:valid_attributes) { { name: 'Mother_bux', block: 'C', location: 'west side' } }
@@ -89,12 +81,12 @@ RSpec.describe 'Teachers_Quarter API', type: :request do
     end
   end
 
-  # Test suite for PUT /vcs/:id
- # describe 'PUT /vcs/:id' do
+  # Test suite for PUT /teachers_quarters/:id
+ # describe 'PUT /teachers_quarters/:id' do
   #  let(:valid_attributes) { { name: 'Shopping' } }
 
    # context 'when the record exists' do
-  #    before { put "/vcs/#{vc_id}", params: valid_attributes }
+  #    before { put "/teachers_quarters/#{teachers_quarter_id}", params: valid_attributes }
 
    #   it 'updates the record' do
    #     expect(response.body).to be_empty
@@ -106,9 +98,9 @@ RSpec.describe 'Teachers_Quarter API', type: :request do
    # end
  # end
 
-  # Test suite for DELETE /vcs/:id
- # describe 'DELETE /vcs/:id' do
-  #  before { delete "/vcs/#{vc_id}" }
+  # Test suite for DELETE /teachers_quarters/:id
+ # describe 'DELETE /teachers_quarters/:id' do
+  #  before { delete "/teachers_quarters/#{teachers_quarter_id}" }
 
   #  it 'returns status code 204' do
   #    expect(response).to have_http_status(204)
