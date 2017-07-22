@@ -46,6 +46,6 @@ class HallsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def hall_params
-      params.require(:hall).permit(:Hall_Id, :Hall_Name, :Provost_Name, :Capacity)
+      params.permit(:Hall_Id, :Hall_Name, :Provost_Name, :Capacity)
     end
 end
