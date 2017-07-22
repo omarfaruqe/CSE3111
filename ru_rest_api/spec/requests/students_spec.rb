@@ -58,7 +58,7 @@ RSpec.describe 'Students API', type: :request do
       before { post '/students', params: valid_attributes }
 
       it 'creates a student' do
-        expect(json['student_id']).to eq('11')
+        expect(json['Student_id']).to eq('11')
       end
 
       it 'returns status code 201' do
