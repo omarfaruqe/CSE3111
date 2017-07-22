@@ -46,6 +46,6 @@ class BusSchedulesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def bus_schedule_params
-      params.require(:bus_schedule).permit(:bus_id, :time, :starting_place, :destination, :bus_type)
+      params.permit(:bus_id, :time, :starting_place, :destination, :bus_type)
     end
 end
