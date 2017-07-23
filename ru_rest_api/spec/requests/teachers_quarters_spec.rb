@@ -71,7 +71,7 @@ RSpec.describe 'Teachers_Quarter API', type: :request do
     end
 
     context 'when the request is invalid' do
-      before { post '/teachers_quarters', params: { name: 'Foobar' } }
+      before { post '/teachers_quarters', params: { name: 'Something' } }
 
       it 'returns status code 422' do
         expect(response).to have_http_status(422)
@@ -83,7 +83,7 @@ RSpec.describe 'Teachers_Quarter API', type: :request do
 
   # Test suite for PUT /teachers_quarters/:id
  # describe 'PUT /teachers_quarters/:id' do
-  #  let(:valid_attributes) { { name: 'Shopping' } }
+  #  let(:valid_attributes) { { name: 'AnyName' } }
 
    # context 'when the record exists' do
   #    before { put "/teachers_quarters/#{teachers_quarter_id}", params: valid_attributes }
@@ -99,11 +99,11 @@ RSpec.describe 'Teachers_Quarter API', type: :request do
  # end
 
   # Test suite for DELETE /teachers_quarters/:id
- # describe 'DELETE /teachers_quarters/:id' do
-  #  before { delete "/teachers_quarters/#{teachers_quarter_id}" }
+  describe 'DELETE /teachers_quarters/:id' do
+    before { delete "/teachers_quarters/#{teachers_quarter_id}" }
 
-  #  it 'returns status code 204' do
-  #    expect(response).to have_http_status(204)
-  #  end
- # end
+    it 'returns status code 204' do
+      expect(response).to have_http_status(204)
+    end
+  end
 end

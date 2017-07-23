@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::API
 	include Response
-    include ExceptionHandler
-
+	include ExceptionHandler
+	
   before_action :authenticate_request
   attr_reader :current_user
 
