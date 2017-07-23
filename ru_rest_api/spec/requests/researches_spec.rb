@@ -72,47 +72,47 @@ RSpec.describe "Researches", type: :request do
 
   # PUT Request....................................................>
 
-  describe "PUT/researches/:id" do
+  #describe "PUT/researches/:id" do
 
 
-     let(:valid_attributes){ {name:'Mahfuz'} }
+     #let(:valid_attributes){ {name:'Mahfuz'} }
 
-     context "when record exists" do
+     #context "when record exists" do
 
-        before{put '/researches/#{research_id}',params:valid_attributes}
+        #before{put '/researches/#{research_id}',params:valid_attributes}
 
-        it "updates the record" do
-            expect(response.body).to be_empty
-        end
+        #it "updates the record" do
+            #expect(response.body).to be_empty
+        #end
 
-        it "returns status code 204" do
-            expect(response).to have_http_status(204)
-        end
-
-
-     end
+        #it "returns status code 204" do
+            #expect(response).to have_http_status(204)
+       # end
 
 
+     #end
 
 
-  end
+
+
+  #end
 
 
   # DELETE Request......................................>
 
-  describe "DELETE/researches/:id" do
+  #describe "DELETE/researches/:id" do
 
-    context "when record exists" do
+    #context "when record exists" do
 
-      before{delete '/researches/#{research_id}'}
+      #before{delete '/researches/#{research_id}'}
 
-      it "returns status code 204" do
-        expect(response).to have_http_status(204)
-      end
+      #it "returns status code 204" do
+       # expect(response).to have_http_status(204)
+      #end
 
 
-    end
+    #end
 
-  end
+  #end
 
 end
