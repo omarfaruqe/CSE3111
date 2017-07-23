@@ -34,6 +34,9 @@ group :development, :test do
 
   # Use Factory Girl for generating random test data
   gem 'factory_girl_rails'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'faker'
+  gem 'database_cleaner'
 
 end
 

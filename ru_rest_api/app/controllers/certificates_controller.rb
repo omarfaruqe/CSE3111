@@ -4,48 +4,40 @@ class CertificatesController < ApplicationController
   # GET /certificates
   def index
     @certificates = Certificate.all
-
-    render json: @certificates
-  end
-
-  # GET /certificates/1
-  def show
-    render json: @certificate
+    json_response(@certificates)
   end
 
   # POST /certificates
   def create
-    @certificate = Certificate.new(certificate_params)
-
-    if @certificate.save
-      render json: @certificate, status: :created, location: @certificate
-    else
-      render json: @certificate.errors, status: :unprocessable_entity
-    end
+    @certificate = Certificate.create!(certificate_params)
+    json_response(@certificate, :created)
   end
 
-  # PATCH/PUT /certificates/1
+  # GET /certificates/:id
+  def show
+    json_response(@certificate)
+  end
+
+  # PUT /certificates/:id
   def update
-    if @certificate.update(certificate_params)
-      render json: @certificate
-    else
-      render json: @certificate.errors, status: :unprocessable_entity
-    end
+    @certificate.update(certificate_params)
+    head :no_content
   end
 
-  # DELETE /certificates/1
+  # DELETE /certificates/:id
   def destroy
     @certificate.destroy
+    head :no_content
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_certificate
-      @certificate = Certificate.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def certificate_params
-      params.permit(:name, :shift, :duration, :requirement)
-    end
+  def certificate_params
+    # whitelist params
+    params.permit(:name, :shift, :duration, :requirement)
+  end
+
+  def set_certificate
+    @certificate = Certificate.find(params[:id])
+  end
 end
