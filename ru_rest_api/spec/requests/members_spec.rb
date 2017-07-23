@@ -1,13 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe "Members", type: :request do
+RSpec.describe 'Members API', type: :request do
   # initialize test data 
   let!(:members) { create_list(:member, 10) }
   let(:member_id) { members.first.id }
 
   # Test suite for GET /members
   describe 'GET /members' do
-    # make HTTP get request before each memberple
+    # make HTTP get request before each example
     before { get '/members' }
 
     it 'returns members' do
@@ -52,16 +52,13 @@ RSpec.describe "Members", type: :request do
   # Test suite for POST /members
   describe 'POST /members' do
     # valid payload
-    let(:valid_attributes) { { name: 'Md. Sadiqul Amin', stdId: '1510876117', contactInfo: 'sadiq.cseru@gmail.com', memberStatus: 'President'} }
+    let(:valid_attributes) { { name: 'Sadiq', stdId: '1510876117', contactInfo: 'sadiq.cseru@gmail.com', memberStatus: 'President' } }
 
     context 'when the request is valid' do
       before { post '/members', params: valid_attributes }
 
       it 'creates a member' do
-        expect(json['name']).to eq('Md. Sadiqul Amin')
-        expect(json['stdId']).to eq('1510876117')
-        expect(json['contactInfo']).to eq('sadiq.cseru@gmail.com')
-        expect(json['memberStatus']).to eq('President')
+        expect(json['name']).to eq('Sadiq')
       end
 
       it 'returns status code 201' do
@@ -70,27 +67,22 @@ RSpec.describe "Members", type: :request do
     end
 
     context 'when the request is invalid' do
-      before { post '/members', params: { name: 'Md. Sadiqul Amin', stdId: '1510876117', contactInfo: 'sadiq.cseru@gmail.com'} }
-
-      #, memberStatus: 'President', created_at: '2017-07-23T07:54:00.958Z', updated_at: '2017-07-23T07:54:00.958Z'
-      #+"{\"id\":11,\"name\":\"Md. Sadiqul Amin\",\"stdId\":\"1510876117\",
-      #\"contactInfo\":\"sadiq.cseru@gmail.com\",\"memberStatus\":\"Normal\",
-      #\"created_at\":\"2017-07-23T07:54:00.958Z\",
-      #\"updated_at\":\"2017-07-23T07:54:00.958Z\"}"
+      before { post '/members', params: { name: 'Imran',  stdId: '1510176113', contactInfo: '01716572089'} }
 
       it 'returns status code 422' do
         expect(response).to have_http_status(422)
       end
 
       it 'returns a validation failure message' do
-        expect(response.body).to match(/Validation failed: Created by can't be blank/)
+        expect(response.body)
+          .to match(/Validation failed: Memberstatus can't be blank/)
       end
     end
   end
 
   # Test suite for PUT /members/:id
   describe 'PUT /members/:id' do
-    let(:valid_attributes) { { name: 'Shah Mohammad Imran Hossain' } }
+    let(:valid_attributes) { { name: 'Roy' } }
 
     context 'when the record exists' do
       before { put "/members/#{member_id}", params: valid_attributes }

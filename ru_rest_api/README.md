@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an API focused on Students Organizations of University of Rajshahi. 
 
-Things you may want to cover:
+* Ruby version 2.3
+* Framework - Ruby on Rails
+* Testing Tool - rspec
+* Database - sqlite3
 
-* Ruby version
+* [Documentation] (https://app.apiary.io/studentorganizationsapi1)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Anyone interested in developing this API is cordially welcomed.
