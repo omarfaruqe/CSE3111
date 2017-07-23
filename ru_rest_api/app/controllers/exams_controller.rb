@@ -4,48 +4,40 @@ class ExamsController < ApplicationController
   # GET /exams
   def index
     @exams = Exam.all
-
-    render json: @exams
-  end
-
-  # GET /exams/1
-  def show
-    render json: @exam
+    json_response(@exams)
   end
 
   # POST /exams
   def create
-    @exam = Exam.new(exam_params)
-
-    if @exam.save
-      render json: @exam, status: :created, location: @exam
-    else
-      render json: @exam.errors, status: :unprocessable_entity
-    end
+    @exam = Exam.create!(exam_params)
+    json_response(@exam, :created)
   end
 
-  # PATCH/PUT /exams/1
+  # GET /exams/:id
+  def show
+    json_response(@exam)
+  end
+
+  # PUT /exams/:id
   def update
-    if @exam.update(exam_params)
-      render json: @exam
-    else
-      render json: @exam.errors, status: :unprocessable_entity
-    end
+    @exam.update(exam_params)
+    head :no_content
   end
 
-  # DELETE /exams/1
+  # DELETE /exams/:id
   def destroy
     @exam.destroy
+    head :no_content
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_exam
-      @exam = Exam.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def exam_params
-      params.require(:exam).permit(:exam_id, :time, :date, :length)
-    end
+  def exam_params
+    # whitelist params
+    params.permit(:exam_id, :time, :date, :length)
+  end
+
+  def set_exam
+    @exam = Exam.find(params[:id])
+  end
 end
