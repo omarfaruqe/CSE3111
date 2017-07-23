@@ -46,6 +46,6 @@ class ResidencesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def residence_params
-      params.require(:residence).permit(:Dormitory_name, :Total_seat, :Notice)
+      params.permit(:Dormitory_name, :Total_seat, :Notice)
     end
 end
