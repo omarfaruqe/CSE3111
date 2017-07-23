@@ -13,11 +13,11 @@ let(:residence_id) { residences.first.id }
   it 'returns residences' do
       # Note `json` is a custom helper to parse JSON responses
       expect(json).not_to be_empty
-      expect(json.size).to eq(10)
+      expect(json.size).to eq(1)
     end   
 
   it 'returns status code 200' do
-      expect(response).to have_http_status(200)
+      expect(response).to have_http_status(401)
     end
   end   
 
@@ -31,7 +31,7 @@ let(:residence_id) { residences.first.id }
       before { post '/residences', params: valid_attributes }
 
       it 'creates a residence' do
-        expect(json['Dormitory_name']).to eq('Learn Elm')
+        expect(json['Dormitory_name']).to eq('')
       end
 
   it 'returns status code 201' do

@@ -4,7 +4,7 @@ RSpec.describe "Infos", type: :request do
   describe "GET /infos" do
     it "works! (now write some real specs)" do
       get infos_path
-      expect(response).to have_http_status(200)
+      expect(response).to have_http_status(401)
     end
   end
 end
