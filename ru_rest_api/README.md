@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Documentation link:http://docs.externalcoursesapi.apiary.io/#
