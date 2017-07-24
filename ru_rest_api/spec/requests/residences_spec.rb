@@ -13,11 +13,11 @@ let(:residence_id) { residences.first.id }
   it 'returns residences' do
       # Note `json` is a custom helper to parse JSON responses
       expect(json).not_to be_empty
-      expect(json.size).to eq(1)
+      expect(json.size).to eq(10)
     end   
 
   it 'returns status code 200' do
-      expect(response).to have_http_status(401)
+      expect(response).to have_http_status(200)
     end
   end   
 
@@ -30,12 +30,12 @@ let(:residence_id) { residences.first.id }
   context 'when the request is valid' do
       before { post '/residences', params: valid_attributes }
 
-     # it 'creates a residence' do
-     #   expect(json['Dormitory_name']).to eq(" ")
-      #end
+      it 'creates a residence' do
+        expect(json['Dormitory_name']).to eq(" ")
+      end
 
   it 'returns status code 201' do
-        expect(response).to have_http_status(401)
+        expect(response).to have_http_status(201)
       end
     end  
     
@@ -43,7 +43,7 @@ let(:residence_id) { residences.first.id }
       before { post '/residences', params: { Dormitory_name: 'Foobar' } }     
 
    it 'returns status code 422' do
-        expect(response).to have_http_status(401)
+        expect(response).to have_http_status(422)
       end    
       
 
@@ -72,7 +72,7 @@ let(:residence_id) { residences.first.id }
     before { delete "/residences/#{residence_id}" }
 
     it 'returns status code 204' do
-      expect(response).to have_http_status(401)
+      expect(response).to have_http_status(204)
     end
   end
 end
