@@ -27,7 +27,7 @@ RSpec.describe 'Certificates API', type: :request do
   # Test suite for POST /certificates
   describe 'POST /certificates' do
     # valid payload
-    let(:valid_attributes) { { name: 'Learn Elm', shift: 'morning', duration: 'two', requirement: 'Bsc' ,created_by: '1' } }
+    let(:valid_attributes) { { name: 'Learn Elm', shift: 'morning', duration: 'two',requirement:'Bsc',  created_by: '1' } }
 
     context 'when the request is valid' do
       before { post '/certificates', params: valid_attributes }
