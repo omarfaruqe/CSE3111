@@ -39,6 +39,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (8.0.0)
+    bcrypt (3.1.11)
     builder (3.2.3)
     byebug (9.0.6)
     concurrent-ruby (1.0.5)
@@ -55,6 +56,7 @@ GEM
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.1)
+    jwt (1.5.6)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.5)
@@ -115,6 +117,7 @@ GEM
     rspec-support (3.6.0)
     shoulda-matchers (3.1.2)
       activesupport (>= 4.0.0)
+    simple_command (0.0.9)
     sprockets (3.7.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -137,14 +140,17 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  bcrypt (~> 3.1.11)
   byebug
   database_cleaner
   factory_girl_rails (~> 4.0)
   faker
+  jwt
   puma (~> 3.7)
   rails (~> 5.1.0)
   rspec-rails (>= 3.5.0)
   shoulda-matchers (~> 3.1)
+  simple_command
   sqlite3
   tzinfo-data
 
